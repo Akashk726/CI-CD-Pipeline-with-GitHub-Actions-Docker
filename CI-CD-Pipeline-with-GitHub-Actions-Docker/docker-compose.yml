@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  web:
+    image: ${DOCKERHUB_USERNAME}/todo-app:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
